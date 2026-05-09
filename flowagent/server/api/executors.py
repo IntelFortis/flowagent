@@ -565,13 +565,16 @@ async def _exec_loop(config: Dict, input_data: Any, context: Dict) -> Dict:
 
 
 async def _exec_code(config: Dict, input_data: Any, context: Dict) -> Dict:
-    """Execute Python code in a sandboxed environment."""
+    """Execute Python code with restricted globals.
+
+    This is not a security sandbox and must not be exposed to untrusted code.
+    """
     code = config.get("code", "")
 
     if not code:
         return {"error": "No code provided", "output": None}
 
-    # Create sandboxed globals
+    # Limit available globals for convenience, not for strong isolation.
     safe_builtins = {
         "print": print, "len": len, "str": str, "int": int, "float": float,
         "bool": bool, "list": list, "dict": dict, "tuple": tuple, "set": set,
@@ -582,17 +585,17 @@ async def _exec_code(config: Dict, input_data: Any, context: Dict) -> Dict:
         "True": True, "False": False, "None": None,
     }
 
-    sandbox = {"__builtins__": safe_builtins, "input_data": input_data, "json": json}
+    exec_globals = {"__builtins__": safe_builtins, "input_data": input_data, "json": json}
     output_buffer = io.StringIO()
 
     try:
         with contextlib.redirect_stdout(output_buffer):
-            exec(code, sandbox)
+            exec(code, exec_globals)
 
         # Try to get return value from main() function
         result = None
-        if "main" in sandbox and callable(sandbox["main"]):
-            result = sandbox["main"](input_data)
+        if "main" in exec_globals and callable(exec_globals["main"]):
+            result = exec_globals["main"](input_data)
 
         stdout = output_buffer.getvalue()
         return {"output": result, "stdout": stdout if stdout else None}
