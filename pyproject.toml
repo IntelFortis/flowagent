@@ -26,7 +26,6 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Software Development :: Libraries :: Application Frameworks",
-    "Typing :: Typed",
 ]
 keywords = [
     "workflow",
@@ -57,9 +56,9 @@ llm = [
     "mistralai>=0.1.0",
 ]
 database = [
-    "sqlalchemy>=2.0.0",
     "asyncpg>=0.28.0",
-    "pymongo>=4.4.0",
+    "aiomysql>=0.2.0",
+    "motor>=3.3.0",
     "redis>=5.0.0",
     "elasticsearch>=8.10.0",
 ]
@@ -72,11 +71,7 @@ messaging = [
     "slack-sdk>=3.21.0",
     "discord.py>=2.3.0",
     "python-telegram-bot>=20.0",
-]
-monitoring = [
-    "prometheus-client>=0.17.0",
-    "opentelemetry-api>=1.20.0",
-    "opentelemetry-sdk>=1.20.0",
+    "aiosmtplib>=3.0.0",
 ]
 dev = [
     "pytest>=7.4.0",
@@ -85,15 +80,14 @@ dev = [
     "mypy>=1.5.0",
     "ruff>=0.1.0",
     "pre-commit>=3.3.0",
-    "mkdocs>=1.5.0",
-    "mkdocs-material>=9.4.0",
 ]
 ui = [
     "fastapi>=0.104.0",
+    "pydantic>=2.0.0",
     "uvicorn>=0.24.0",
 ]
 all = [
-    "flowagent[llm,database,cloud,messaging,monitoring,ui]",
+    "flowagent[llm,database,cloud,messaging,ui]",
 ]
 
 [project.urls]

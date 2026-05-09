@@ -20,7 +20,7 @@ It is useful as a learning project, a prototype, or a base for local workflow id
 - A FastAPI backend for the visual editor
 - A React/Vite visual workflow editor
 - Built-in node executors for HTTP requests, JSON transforms, filters, code snippets, file/log output, and simple AI-style nodes
-- Optional integration wrappers for LLMs, databases, cloud services, messaging, and monitoring
+- Optional integration wrappers for LLMs, databases, cloud services, and messaging
 
 Some integration modules require optional dependencies and external services. They should be reviewed and tested for your own use case before relying on them.
 
