@@ -1,7 +1,7 @@
 """
-FlowAgent Benchmarks
+FlowAgent local benchmark helpers
 
-Performance benchmarks for FlowAgent.
+Small timing helpers for local experiments.
 """
 
 from benchmarks.performance import run_benchmarks

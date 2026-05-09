@@ -33,7 +33,7 @@ If applicable, add screenshots to help explain your problem.
 
 - OS: [e.g., Windows 10, macOS 12, Ubuntu 20.04]
 - Python Version: [e.g., 3.9, 3.10, 3.11]
-- FlowAgent Version: [e.g., 1.0.0]
+- FlowAgent Version: [e.g., 0.1.0]
 
 ## Additional Context
 

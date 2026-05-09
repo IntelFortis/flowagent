@@ -178,7 +178,7 @@ class OpenAI(LLMProvider):
         except ImportError:
             raise IntegrationError(
                 "OpenAI package not installed. "
-                "Install with: pip install flowagent[llm]"
+                "Install this local package with the llm extra: pip install -e '.[llm]'"
             )
 
     async def chat(
@@ -294,7 +294,7 @@ class Anthropic(LLMProvider):
         except ImportError:
             raise IntegrationError(
                 "Anthropic package not installed. "
-                "Install with: pip install flowagent[llm]"
+                "Install this local package with the llm extra: pip install -e '.[llm]'"
             )
 
     async def chat(
@@ -401,7 +401,7 @@ class GoogleAI(LLMProvider):
         except ImportError:
             raise IntegrationError(
                 "Google AI package not installed. "
-                "Install with: pip install flowagent[llm]"
+                "Install this local package with the llm extra: pip install -e '.[llm]'"
             )
 
     async def chat(
@@ -499,7 +499,7 @@ class Mistral(LLMProvider):
         except ImportError:
             raise IntegrationError(
                 "Mistral AI package not installed. "
-                "Install with: pip install flowagent[llm]"
+                "Install this local package with the llm extra: pip install -e '.[llm]'"
             )
 
     async def chat(
@@ -593,7 +593,7 @@ class Ollama(LLMProvider):
         except ImportError:
             raise IntegrationError(
                 "httpx package not installed. "
-                "Install with: pip install flowagent"
+                "Install this repository locally with: pip install -e ."
             )
 
     async def chat(
@@ -688,7 +688,7 @@ class MiMo(LLMProvider):
     Xiaomi MiMo model provider.
 
     Supports two modes:
-    1. vLLM OpenAI-compatible API (recommended for production)
+    1. vLLM OpenAI-compatible API (server-backed inference)
     2. Hugging Face transformers (local inference)
 
     Accepts ANY model name from Hugging Face or your vLLM server.

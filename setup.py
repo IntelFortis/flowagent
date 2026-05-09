@@ -9,15 +9,15 @@ from setuptools import setup, find_packages
 
 setup(
     name="flowagent",
-    version="1.0.0",
+    version="0.1.0",
     author="IntelFortis",
-    description="The Next-Generation Workflow Automation Framework",
+    description="A small personal workflow automation experiment with a visual editor",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/flowagent/flowagent",
+    url="https://github.com/IntelFortis/flowagent",
     packages=find_packages(),
     classifiers=[
-        "Development Status :: 5 - Production/Stable",
+        "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",

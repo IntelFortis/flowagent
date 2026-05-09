@@ -12,7 +12,7 @@ from pydantic import BaseModel, Field
 router = APIRouter(tags=["workflows"])
 
 
-# In-memory storage (replace with database in production)
+# In-memory storage for local experimentation. Use persistent storage for deployments.
 _workflows: Dict[str, Dict[str, Any]] = {}
 _executions: Dict[str, Dict[str, Any]] = {}
 

@@ -174,7 +174,7 @@ class AWS(CloudProvider):
         except ImportError:
             raise IntegrationError(
                 "boto3 package not installed. "
-                "Install with: pip install flowagent[cloud]"
+                "Install this local package with the cloud extra: pip install -e '.[cloud]'"
             )
 
     async def upload(
@@ -274,7 +274,7 @@ class GoogleCloud(CloudProvider):
         except ImportError:
             raise IntegrationError(
                 "google-cloud-storage package not installed. "
-                "Install with: pip install flowagent[cloud]"
+                "Install this local package with the cloud extra: pip install -e '.[cloud]'"
             )
 
     async def upload(
@@ -366,7 +366,7 @@ class Azure(CloudProvider):
         except ImportError:
             raise IntegrationError(
                 "azure-storage-blob package not installed. "
-                "Install with: pip install flowagent[cloud]"
+                "Install this local package with the cloud extra: pip install -e '.[cloud]'"
             )
 
     async def upload(

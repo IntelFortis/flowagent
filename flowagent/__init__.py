@@ -1,10 +1,10 @@
 """
-FlowAgent - The Next-Generation Workflow Automation Framework
+FlowAgent - A small personal workflow automation experiment.
 
-Create complex workflows with just a few lines of code.
+Create and run simple Python workflows with optional visual editing tools.
 """
 
-__version__ = "1.0.0"
+__version__ = "0.1.0"
 __author__ = "IntelFortis"
 __email__ = ""
 
@@ -61,10 +61,10 @@ __all__ = [
 
 # Version info
 VERSION_INFO = {
-    "major": 1,
-    "minor": 0,
+    "major": 0,
+    "minor": 1,
     "patch": 0,
-    "release": "stable",
+    "release": "alpha",
 }
 
 def get_version() -> str:

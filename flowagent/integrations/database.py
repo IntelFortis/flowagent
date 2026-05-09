@@ -146,7 +146,7 @@ class PostgreSQL(DatabaseProvider):
         except ImportError:
             raise IntegrationError(
                 "asyncpg package not installed. "
-                "Install with: pip install flowagent[database]"
+                "Install this local package with the database extra: pip install -e '.[database]'"
             )
         except Exception as e:
             raise IntegrationError(f"PostgreSQL connection failed: {e}") from e
@@ -225,7 +225,7 @@ class MySQL(DatabaseProvider):
         except ImportError:
             raise IntegrationError(
                 "aiomysql package not installed. "
-                "Install with: pip install flowagent[database]"
+                "Install this local package with the database extra: pip install -e '.[database]'"
             )
         except Exception as e:
             raise IntegrationError(f"MySQL connection failed: {e}") from e
@@ -306,7 +306,7 @@ class MongoDB(DatabaseProvider):
         except ImportError:
             raise IntegrationError(
                 "motor package not installed. "
-                "Install with: pip install flowagent[database]"
+                "Install this local package with the database extra: pip install -e '.[database]'"
             )
         except Exception as e:
             raise IntegrationError(f"MongoDB connection failed: {e}") from e
@@ -423,7 +423,7 @@ class Redis(DatabaseProvider):
         except ImportError:
             raise IntegrationError(
                 "redis package not installed. "
-                "Install with: pip install flowagent[database]"
+                "Install this local package with the database extra: pip install -e '.[database]'"
             )
         except Exception as e:
             raise IntegrationError(f"Redis connection failed: {e}") from e
@@ -533,7 +533,7 @@ class Elasticsearch(DatabaseProvider):
         except ImportError:
             raise IntegrationError(
                 "elasticsearch package not installed. "
-                "Install with: pip install flowagent[database]"
+                "Install this local package with the database extra: pip install -e '.[database]'"
             )
         except Exception as e:
             raise IntegrationError(f"Elasticsearch connection failed: {e}") from e

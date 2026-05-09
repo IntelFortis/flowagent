@@ -611,7 +611,7 @@ async def _exec_send_email(config: Dict, input_data: Any, context: Dict) -> Dict
     if not to:
         return {"error": "Recipient email is required", "sent": False}
 
-    # In production, use aiosmtplib
+    # For real email delivery, wire this to an SMTP client such as aiosmtplib.
     return {"sent": True, "to": to, "subject": subject, "simulated": True}
 
 

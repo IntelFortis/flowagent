@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "flowagent"
 dynamic = ["version"]
-description = "The Next-Generation Workflow Automation Framework"
+description = "A small personal workflow automation experiment with a visual editor"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
@@ -13,7 +13,7 @@ authors = [
     { name = "IntelFortis" },
 ]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
@@ -38,7 +38,7 @@ keywords = [
     "dag",
     "pipeline",
     "async",
-    "distributed",
+    "visual-editor",
 ]
 dependencies = [
     "httpx>=0.24.0",
@@ -97,10 +97,9 @@ all = [
 ]
 
 [project.urls]
-Documentation = "https://flowagent.dev"
-Repository = "https://github.com/flowagent/flowagent"
-Issues = "https://github.com/flowagent/flowagent/issues"
-Changelog = "https://github.com/flowagent/flowagent/blob/main/CHANGELOG.md"
+Repository = "https://github.com/IntelFortis/flowagent"
+Issues = "https://github.com/IntelFortis/flowagent/issues"
+Changelog = "https://github.com/IntelFortis/flowagent/blob/main/CHANGELOG.md"
 
 [project.scripts]
 flowagent = "flowagent.cli:main"

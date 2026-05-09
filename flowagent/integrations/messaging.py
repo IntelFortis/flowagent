@@ -101,7 +101,7 @@ class Slack(MessagingProvider):
         except ImportError:
             raise IntegrationError(
                 "slack-sdk package not installed. "
-                "Install with: pip install flowagent[messaging]"
+                "Install this local package with the messaging extra: pip install -e '.[messaging]'"
             )
 
     async def send(self, message: Message) -> bool:
@@ -184,7 +184,7 @@ class Discord(MessagingProvider):
         except ImportError:
             raise IntegrationError(
                 "discord.py package not installed. "
-                "Install with: pip install flowagent[messaging]"
+                "Install this local package with the messaging extra: pip install -e '.[messaging]'"
             )
 
     async def send(self, message: Message) -> bool:
@@ -247,7 +247,7 @@ class Telegram(MessagingProvider):
         except ImportError:
             raise IntegrationError(
                 "python-telegram-bot package not installed. "
-                "Install with: pip install flowagent[messaging]"
+                "Install this local package with the messaging extra: pip install -e '.[messaging]'"
             )
 
     async def send(self, message: Message) -> bool:
@@ -401,7 +401,7 @@ class Webhook(MessagingProvider):
         except ImportError:
             raise IntegrationError(
                 "httpx package not installed. "
-                "Install with: pip install flowagent"
+                "Install this repository locally with: pip install -e ."
             )
 
     async def send(self, message: Message) -> bool:

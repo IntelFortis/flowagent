@@ -4,7 +4,7 @@ MiMo Agent Example
 This example demonstrates how to use Xiaomi MiMo model with FlowAgent.
 
 Usage:
-    # Option 1: vLLM (recommended for production)
+    # Option 1: vLLM (server-backed inference)
     # First start vLLM server:
     #   pip install vllm
     #   vllm serve XiaomiMiMo/MiMo-7B-RL --host 0.0.0.0 --port 8000

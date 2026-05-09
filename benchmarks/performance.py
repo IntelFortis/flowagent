@@ -1,7 +1,7 @@
 """
-FlowAgent Performance Benchmarks
+FlowAgent Local Timing Helpers
 
-This module contains performance benchmarks for FlowAgent.
+This module contains simple timing helpers for local experiments.
 """
 
 import asyncio
@@ -117,7 +117,7 @@ async def benchmark_state_operations(num_operations: int = 10000) -> float:
 
 def run_benchmarks():
     """Run all benchmarks."""
-    print("FlowAgent Performance Benchmarks")
+    print("FlowAgent local timing helpers")
     print("=" * 50)
 
     # Task creation
@@ -145,7 +145,7 @@ def run_benchmarks():
     print(f"State Operations (10000 ops): {duration:.3f}s")
 
     print("=" * 50)
-    print("Benchmarks complete!")
+    print("Timing checks complete!")
 
 
 if __name__ == "__main__":

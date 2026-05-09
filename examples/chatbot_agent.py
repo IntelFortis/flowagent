@@ -48,7 +48,7 @@ async def get_current_time() -> str:
 async def calculate(expression: str) -> str:
     """Calculate a mathematical expression."""
     try:
-        # Simple calculator - in production, use a safer eval
+        # Simple calculator for the demo. Do not expose eval to untrusted input.
         result = eval(expression)
         return str(result)
     except Exception as e:

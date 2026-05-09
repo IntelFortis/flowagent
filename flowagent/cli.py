@@ -28,9 +28,9 @@ console = Console()
 @click.option("--log-file", type=click.Path(), help="Log file path")
 def main(verbose: bool, log_file: Optional[str]) -> None:
     """
-    FlowAgent - The Next-Generation Workflow Automation Framework
+    FlowAgent - A small personal workflow automation experiment.
 
-    Create complex workflows with just a few lines of code.
+    Create and run simple Python workflows.
     """
     level = logging.DEBUG if verbose else logging.INFO
     setup_logger(level=level, file=log_file)
@@ -212,7 +212,7 @@ if __name__ == "__main__":
 
         # Create config file
         config = '''# FlowAgent Configuration
-# See documentation for all available options
+# Adjust these values for local use.
 
 workflow:
   max_parallel_tasks: 10
@@ -241,8 +241,7 @@ This is a FlowAgent workflow automation project.
 ## Quick Start
 
 ```bash
-# Install FlowAgent
-pip install flowagent
+# Install FlowAgent from this repository or your local checkout first.
 
 # Run the example workflow
 flowagent run workflows/example.py
@@ -255,15 +254,15 @@ flowagent validate workflows/example.py
 
 ```
 .
-├── workflows/      # Workflow definitions
-├── tasks/          # Reusable task definitions
-├── config/         # Configuration files
-└── README.md       # This file
+|-- workflows/      # Workflow definitions
+|-- tasks/          # Reusable task definitions
+|-- config/         # Configuration files
+`-- README.md       # This file
 ```
 
 ## Documentation
 
-See [FlowAgent Documentation](https://flowagent.dev) for more information.
+See the FlowAgent repository README for more information.
 '''
 
         (output_path / "README.md").write_text(readme)

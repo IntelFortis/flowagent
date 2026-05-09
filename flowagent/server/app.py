@@ -22,8 +22,8 @@ def create_app() -> FastAPI:
     """Create and configure the FastAPI application."""
     app = FastAPI(
         title="FlowAgent",
-        description="FlowAgent - Visual Workflow Automation Platform",
-        version="1.0.0",
+        description="FlowAgent local visual workflow editor API",
+        version="0.1.0",
     )
 
     # CORS

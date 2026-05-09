@@ -142,7 +142,7 @@ class Dashboard:
             "Press Ctrl+C to exit | ",
             style="dim",
         )
-        footer.append("FlowAgent v1.0.0", style="blue")
+        footer.append("FlowAgent v0.1.0", style="blue")
 
         return Panel(footer, style="blue")
 
